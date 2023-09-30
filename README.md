@@ -1,32 +1,39 @@
-## 環境構築
+## インストール
 
 ### 事前準備
 
-node.js をローカル環境にインストール
+node.js をローカルにインストール
 
 ### ローカルに開発環境を構築
 
-```
-# リポジトリをclone
-git@github.com:Jumpei-Arigaya/beator-front-web.git
-```
+#### リポジトリを clone
 
 ```
-# プロジェクトルートに移動
+git clone git@github.com:Jumpei-Arigaya/beator-front-web.git
+```
+
+#### プロジェクトルートに移動
+
+```
 cd beator-front-web
 ```
 
+#### npm の依存パッケージをインストール
+
 ```
-# npm の依存パッケージをインストール
 npm install
 ```
 
+#### 開発サーバを起動
+
 ```
-# 開発サーバーを起動
 npm run dev
 ```
 
-```
-# 開発サーバーを止めたい場合
+#### ブラウザからトップページにアクセス
+
+http://localhost:3000
+
+#### 開発サーバを停止
+
 ctrl + c
-```
