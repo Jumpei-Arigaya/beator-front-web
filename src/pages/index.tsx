@@ -1,14 +1,15 @@
 import { Inter } from "next/font/google";
 import DashBoard from "@/components/layouts/DashBoard";
+import Audio from "@/features/audioList/components/Audio";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <DashBoard />
+    <main>
+      <DashBoard>
+        <Audio />
+      </DashBoard>
     </main>
   );
 }

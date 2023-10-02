@@ -70,7 +70,11 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   justifyContent: "flex-end",
 }));
 
-export default function DashBoard() {
+type LayoutProps = {
+  children: React.ReactNode;
+};
+
+export default function DashBoard({ children }: LayoutProps) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -150,6 +154,7 @@ export default function DashBoard() {
           ))}
         </List>
       </Drawer>
+      <div style={{ marginTop: "64px" }}>{children}</div>
     </Box>
   );
 }
