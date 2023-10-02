@@ -24,6 +24,8 @@ cd beator-front-web
 npm install
 ```
 
+### フロントエンド
+
 #### 開発サーバを起動
 
 ```
@@ -35,5 +37,21 @@ npm run dev
 http://localhost:3000
 
 #### 開発サーバを停止
+
+ctrl + c
+
+### Storybook
+
+#### Storybook のサーバを起動
+
+```
+npm run storybook
+```
+
+#### ブラウザから Storybook のカタログにアクセス
+
+http://localhost:6006
+
+#### Storybook のサーバを停止
 
 ctrl + c
