@@ -1,6 +1,6 @@
+import { Slider, Stack, useTheme } from "@mui/material";
 import VolumeUpRounded from "@mui/icons-material/VolumeUpRounded";
 import VolumeDownRounded from "@mui/icons-material/VolumeDownRounded";
-import { Slider, Stack, useTheme } from "@mui/material";
 
 const VolumeSlider = () => {
   const theme = useTheme();
@@ -20,6 +20,7 @@ const VolumeSlider = () => {
         defaultValue={30}
         sx={{
           color: theme.palette.mode === "dark" ? "#fff" : "rgba(0,0,0,0.87)",
+          width: 100,
           "& .MuiSlider-track": {
             border: "none",
           },

@@ -1,44 +1,42 @@
+import { useState } from "react";
 import IconButton from "@mui/material/IconButton";
 import PauseRounded from "@mui/icons-material/PauseRounded";
 import PlayArrowRounded from "@mui/icons-material/PlayArrowRounded";
 import FastForwardRounded from "@mui/icons-material/FastForwardRounded";
-import FastRewindRounded from "@mui/icons-material/FastRewindRounded";
 import { Box, useTheme } from "@mui/material";
-import { useState } from "react";
+import FastRewindRounded from "@mui/icons-material/FastRewindRounded";
 
 const PlaySkipControls = () => {
   const theme = useTheme();
   const [paused, setPaused] = useState(false);
   const mainIconColor = theme.palette.mode === "dark" ? "#fff" : "#000";
-  const lightIconColor =
-    theme.palette.mode === "dark" ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.4)";
+
   return (
     <>
       <Box
         sx={{
           display: "flex",
-          alignItems: "center",
           justifyContent: "center",
-          mt: -1,
         }}
       >
-        <IconButton aria-label="previous song">
+        <IconButton aria-label="previous song" sx={{ paddingTop: "0" }}>
           <FastRewindRounded fontSize="large" htmlColor={mainIconColor} />
         </IconButton>
         <IconButton
           aria-label={paused ? "play" : "pause"}
           onClick={() => setPaused(!paused)}
+          sx={{ paddingTop: "0" }}
         >
           {paused ? (
             <PlayArrowRounded
-              sx={{ fontSize: "3rem" }}
+              sx={{ fontSize: "2rem" }}
               htmlColor={mainIconColor}
             />
           ) : (
-            <PauseRounded sx={{ fontSize: "3rem" }} htmlColor={mainIconColor} />
+            <PauseRounded sx={{ fontSize: "2rem" }} htmlColor={mainIconColor} />
           )}
         </IconButton>
-        <IconButton aria-label="next song">
+        <IconButton aria-label="next song" sx={{ paddingTop: "0" }}>
           <FastForwardRounded fontSize="large" htmlColor={mainIconColor} />
         </IconButton>
       </Box>

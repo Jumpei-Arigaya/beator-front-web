@@ -1,7 +1,7 @@
-import { Box } from "@mui/material";
-import Slider from "@mui/material/Slider";
 import { useState } from "react";
+import Slider from "@mui/material/Slider";
 import Typography from "@mui/material/Typography";
+import { Box } from "@mui/material";
 import { styled, useTheme } from "@mui/material/styles";
 
 const PlayBackBar = () => {
@@ -23,7 +23,15 @@ const PlayBackBar = () => {
   }
 
   return (
-    <>
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        width: "50%",
+        margin: "auto",
+      }}
+    >
+      <TinyText>{formatDuration(position)}</TinyText>
       <Slider
         aria-label="time-indicator"
         size="small"
@@ -33,6 +41,7 @@ const PlayBackBar = () => {
         max={duration}
         onChange={(_, value) => setPosition(value as number)}
         sx={{
+          margin: "0 10px",
           color: theme.palette.mode === "dark" ? "#fff" : "rgba(0,0,0,0.87)",
           height: 4,
           "& .MuiSlider-thumb": {
@@ -66,11 +75,9 @@ const PlayBackBar = () => {
           justifyContent: "space-between",
           mt: -2,
         }}
-      >
-        <TinyText>{formatDuration(position)}</TinyText>
-        <TinyText>-{formatDuration(duration - position)}</TinyText>
-      </Box>
-    </>
+      ></Box>
+      <TinyText>-{formatDuration(duration - position)}</TinyText>
+    </Box>
   );
 };
 

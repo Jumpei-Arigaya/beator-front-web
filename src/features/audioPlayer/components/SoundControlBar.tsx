@@ -9,14 +9,21 @@ export default function SoundControlBar() {
     <Box
       sx={{
         width: "100vw",
-        backgroundColor: "red",
+        height: "80px",
+        background: "#EEEEEE",
         position: "fixed",
         bottom: 0,
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: 1,
       }}
     >
       <TrackCard />
-      <PlayBackBar />
-      <PlaySkipControls />
+      <Box sx={{ width: "100%", alignItems: "center" }}>
+        <PlayBackBar />
+        <PlaySkipControls />
+      </Box>
       <VolumeSlider />
     </Box>
   );
