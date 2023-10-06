@@ -128,9 +128,6 @@ export default function DashBoard({ children }: LayoutProps) {
             )}
           </IconButton>
         </DrawerHeader>
-        {/* <Divider />
-        
-        <Divider /> */}
         
         {/* 楽曲一覧のリストアイテム */}
       <ListItem disablePadding>
