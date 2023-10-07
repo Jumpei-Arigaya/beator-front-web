@@ -100,9 +100,11 @@ export default function DashBoard({ children }: LayoutProps) {
           >
             <MenuIcon />
           </IconButton>
+          <Link href="/">
           <Typography variant="h6" noWrap component="div">
             B e a t O r
           </Typography>
+          </Link>
         </Toolbar>
       </AppBar>
       <Drawer
