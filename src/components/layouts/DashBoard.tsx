@@ -18,6 +18,7 @@ import ListItemText from "@mui/material/ListItemText";
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import LyricsIcon from '@mui/icons-material/Lyrics';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import Link from 'next/link'
 const drawerWidth = 240;
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
@@ -129,31 +130,45 @@ export default function DashBoard({ children }: LayoutProps) {
         
         {/* 楽曲一覧のリストアイテム */}
       <ListItem disablePadding>
+      <Link href="/songlist">
         <ListItemButton>
           <ListItemIcon>
-            <LibraryMusicIcon /> {/* 楽曲一覧アイコン */}
+             <LibraryMusicIcon /> {/* 楽曲一覧アイコン */}
           </ListItemIcon>
           <ListItemText primary="楽曲一覧" /> {/* テキスト: "楽曲一覧" */}
+          
         </ListItemButton>
+      </Link>
       </ListItem>
 
       <ListItem disablePadding>
-        <ListItemButton>
+        <Link href="/create-song">
+         <ListItemButton>
           <ListItemIcon>
             <LyricsIcon /> {/* 楽曲新規制作:アイコン */}
           </ListItemIcon>
           <ListItemText primary="楽曲新規制作" /> {/* テキスト: "楽曲新規制作" */}
-        </ListItemButton>
+         </ListItemButton>
+        </Link>
       </ListItem>
 
       <ListItem disablePadding>
-        <ListItemButton>
-          <ListItemIcon>
-            <AccountBoxIcon /> {/* プロフィールアイコン */}
-          </ListItemIcon>
-          <ListItemText primary="プロフィール" /> {/* テキスト: "プロフィール" */}
-        </ListItemButton>
+        <Link href="/profile">
+           <ListItemButton>
+              <ListItemIcon>
+                <AccountBoxIcon /> {/* プロフィールアイコン */}
+              </ListItemIcon>
+           <ListItemText primary="プロフィール" /> {/* テキスト: "プロフィール" */}
+         </ListItemButton>
+        </Link>
       </ListItem>
+      
+
+     
+
+
+ 
+
 
       </Drawer>
       <div style={{ marginTop: "64px" }}>{children}</div>
