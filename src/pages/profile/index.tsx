@@ -10,7 +10,6 @@ export default function Home() {
     <main>
       <DashBoard>
         プロフィール画面
-
         <SoundControlBar />
       </DashBoard>
     </main>

@@ -10,8 +10,7 @@ export default function Home() {
     <main>
       <DashBoard>
         楽曲一覧画面
-
-        <SoundControlBar />
+       <SoundControlBar />
       </DashBoard>
     </main>
   );

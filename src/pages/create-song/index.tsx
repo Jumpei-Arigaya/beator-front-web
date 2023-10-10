@@ -10,7 +10,6 @@ export default function Home() {
     <main>
       <DashBoard>
         新規楽曲制作画面
-
         <SoundControlBar />
       </DashBoard>
     </main>
