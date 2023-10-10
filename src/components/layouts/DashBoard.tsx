@@ -15,10 +15,10 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
-import LyricsIcon from '@mui/icons-material/Lyrics';
-import AccountBoxIcon from '@mui/icons-material/AccountBox';
-import Link from 'next/link'
+import LibraryMusicIcon from "@mui/icons-material/LibraryMusic";
+import LyricsIcon from "@mui/icons-material/Lyrics";
+import AccountBoxIcon from "@mui/icons-material/AccountBox";
+import Link from "next/link";
 const drawerWidth = 240;
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
@@ -100,10 +100,10 @@ export default function DashBoard({ children }: LayoutProps) {
           >
             <MenuIcon />
           </IconButton>
-          <Link href="/">
-          <Typography variant="h6" noWrap component="div">
-            B e a t O r
-          </Typography>
+          <Link href="/" style={{ color: "white", textDecoration: "none" }}>
+            <Typography variant="h6" noWrap component="div">
+              B e a t O r
+            </Typography>
           </Link>
         </Toolbar>
       </AppBar>
@@ -129,49 +129,51 @@ export default function DashBoard({ children }: LayoutProps) {
             )}
           </IconButton>
         </DrawerHeader>
-        
+
         {/* 楽曲一覧のリストアイテム */}
-      <ListItem disablePadding>
-      <Link href="/songlist">
-        <ListItemButton>
-          <ListItemIcon>
-             <LibraryMusicIcon /> {/* 楽曲一覧アイコン */}
-          </ListItemIcon>
-          <ListItemText primary="楽曲一覧" /> {/* テキスト: "楽曲一覧" */}
-          
-        </ListItemButton>
-      </Link>
-      </ListItem>
+        <ListItem disablePadding>
+          <Link
+            href="/songlist"
+            style={{ color: "black", textDecoration: "none" }}
+          >
+            <ListItemButton>
+              <ListItemIcon>
+                <LibraryMusicIcon /> {/* 楽曲一覧アイコン */}
+              </ListItemIcon>
+              <ListItemText primary="楽曲一覧" /> {/* テキスト: "楽曲一覧" */}
+            </ListItemButton>
+          </Link>
+        </ListItem>
 
-      <ListItem disablePadding>
-        <Link href="/create-song">
-         <ListItemButton>
-          <ListItemIcon>
-            <LyricsIcon /> {/* 楽曲新規制作:アイコン */}
-          </ListItemIcon>
-          <ListItemText primary="楽曲新規制作" /> {/* テキスト: "楽曲新規制作" */}
-         </ListItemButton>
-        </Link>
-      </ListItem>
+        <ListItem disablePadding>
+          <Link
+            href="/create-song"
+            style={{ color: "black", textDecoration: "none" }}
+          >
+            <ListItemButton>
+              <ListItemIcon>
+                <LyricsIcon /> {/* 楽曲新規制作:アイコン */}
+              </ListItemIcon>
+              <ListItemText primary="楽曲新規制作" />{" "}
+              {/* テキスト: "楽曲新規制作" */}
+            </ListItemButton>
+          </Link>
+        </ListItem>
 
-      <ListItem disablePadding>
-        <Link href="/profile">
-           <ListItemButton>
+        <ListItem disablePadding>
+          <Link
+            href="/profile"
+            style={{ color: "black", textDecoration: "none" }}
+          >
+            <ListItemButton>
               <ListItemIcon>
                 <AccountBoxIcon /> {/* プロフィールアイコン */}
               </ListItemIcon>
-           <ListItemText primary="プロフィール" /> {/* テキスト: "プロフィール" */}
-         </ListItemButton>
-        </Link>
-      </ListItem>
-      
-
-     
-
-
- 
-
-
+              <ListItemText primary="プロフィール" />{" "}
+              {/* テキスト: "プロフィール" */}
+            </ListItemButton>
+          </Link>
+        </ListItem>
       </Drawer>
       <div style={{ marginTop: "64px" }}>{children}</div>
     </Box>
