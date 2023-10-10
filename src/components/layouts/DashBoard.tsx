@@ -145,7 +145,7 @@ export default function DashBoard({ children }: LayoutProps) {
         {/* 楽曲一覧のリストアイテム */}
         <ListItem disablePadding>
           <Link
-            href="/songlist"
+            href="/song-list"
             style={{ color: "black", textDecoration: "none" }}
           >
             <ListItemButton>
