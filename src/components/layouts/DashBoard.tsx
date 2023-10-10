@@ -18,6 +18,7 @@ import ListItemText from "@mui/material/ListItemText";
 import LibraryMusicIcon from "@mui/icons-material/LibraryMusic";
 import LyricsIcon from "@mui/icons-material/Lyrics";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
+import HomeIcon from "@mui/icons-material/Home";
 import Link from "next/link";
 const drawerWidth = 240;
 
@@ -129,6 +130,17 @@ export default function DashBoard({ children }: LayoutProps) {
             )}
           </IconButton>
         </DrawerHeader>
+
+        <ListItem disablePadding>
+          <Link href="/" style={{ color: "black", textDecoration: "none" }}>
+            <ListItemButton>
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+              <ListItemText primary="ホーム画面" />{" "}
+            </ListItemButton>
+          </Link>
+        </ListItem>
 
         {/* 楽曲一覧のリストアイテム */}
         <ListItem disablePadding>
