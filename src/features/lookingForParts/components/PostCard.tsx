@@ -4,19 +4,10 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Chip from "@mui/material/Chip";
 import { Box } from "@mui/material";
-import { useState } from "react";
 import { AudioControl } from "./AudioControl";
+import { AudioControlProps } from "../types";
 
-export const PostCard = () => {
-  const [play, setPlay] = useState(false);
-
-  /**
-   * 再生ボタンクリック時にオーディオをコントロールする
-   */
-  const handleAudioControl = () => {
-    setPlay(!play);
-  };
-
+export const PostCard = (props: AudioControlProps) => {
   return (
     <Card sx={{ minWidth: "210px", minHeight: "210px", cursor: "pointer" }}>
       <CardContent>
@@ -37,11 +28,7 @@ export const PostCard = () => {
             <Typography variant="body2">ジャンル</Typography>
             <Chip label="ロック" color="primary" size="small" />
           </Box>
-          <AudioControl
-            play={play}
-            setPlay={setPlay}
-            handleAudioControl={handleAudioControl}
-          />
+          <AudioControl {...props} />
         </Box>
       </CardContent>
     </Card>

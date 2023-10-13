@@ -2,11 +2,10 @@ import React from "react";
 
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import NotStartedIcon from "@mui/icons-material/NotStarted";
-import { AudioControlProps } from "../types/AudioControlProps";
+import { AudioControlProps } from "@/features/lookingForParts/types";
 
 export const AudioControl = ({
   play,
-  setPlay,
   handleAudioControl,
 }: AudioControlProps) => {
   return (
