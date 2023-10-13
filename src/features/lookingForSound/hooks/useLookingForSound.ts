@@ -1,6 +1,9 @@
 import { useState } from "react";
 
-export const useLookingForParts = () => {
+/**
+ * サウンド募集中の楽曲一覧コンポーネントに使用するカスタムフック
+ */
+export const useLookingForSound = () => {
   const [play, setPlay] = useState(false);
 
   /**

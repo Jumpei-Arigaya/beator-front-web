@@ -1,15 +1,29 @@
-import React from "react";
-
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import NotStartedIcon from "@mui/icons-material/NotStarted";
-import { AudioControlProps } from "@/features/lookingForParts/types";
 
+/**
+ * AudioControlコンポーネントのPropsの型定義
+ */
+type AudioControlProps = {
+  /**
+   * オーディオの再生状態
+   */
+  play: boolean;
+  /**
+   * オーディオコントロールクリック時のイベント関数
+   */
+  handleAudioControl: () => void;
+};
+
+/**
+ * オーディオコントロールを行うコンポーネント
+ */
 export const AudioControl = ({
   play,
   handleAudioControl,
 }: AudioControlProps) => {
   return (
-    <div>
+    <>
       {play ? (
         <NotStartedIcon
           sx={{ fontSize: 50, alignItems: "flex-end" }}
@@ -22,6 +36,6 @@ export const AudioControl = ({
           onClick={() => handleAudioControl()}
         />
       )}
-    </div>
+    </>
   );
 };

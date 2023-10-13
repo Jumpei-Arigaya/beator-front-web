@@ -5,11 +5,35 @@ import Typography from "@mui/material/Typography";
 import Chip from "@mui/material/Chip";
 import { Box } from "@mui/material";
 import { AudioControl } from "./AudioControl";
-import { AudioControlProps } from "../types";
 
-export const PostCard = (props: AudioControlProps) => {
+/**
+ * PostCardコンポーネントのPropsの型定義
+ */
+type PostCardProps = {
+  /**
+   * オーディオの再生状態
+   */
+  play: boolean;
+  /**
+   * オーディオコントロールクリック時のイベント関数
+   */
+  handleAudioControl: () => void;
+};
+
+/**
+ * 楽曲情報投稿コンポーネント
+ */
+export const PostCard = (props: PostCardProps) => {
   return (
-    <Card sx={{ minWidth: "210px", minHeight: "210px", cursor: "pointer" }}>
+    <Card
+      sx={{
+        minWidth: "210px",
+        minHeight: "210px",
+        width: "220px",
+        height: "220px",
+        cursor: "pointer",
+      }}
+    >
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           YOSHIKI
@@ -23,12 +47,19 @@ export const PostCard = (props: AudioControlProps) => {
           <Chip label="ベース" color="secondary" size="small" />
           <Chip label="サックス" color="secondary" size="small" />
         </Box>
-        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
           <Box sx={{ marginTop: 1 }}>
             <Typography variant="body2">ジャンル</Typography>
             <Chip label="ロック" color="primary" size="small" />
           </Box>
-          <AudioControl {...props} />
+          <Box sx={{ marginTop: "22px" }}>
+            <AudioControl {...props} />
+          </Box>
         </Box>
       </CardContent>
     </Card>
