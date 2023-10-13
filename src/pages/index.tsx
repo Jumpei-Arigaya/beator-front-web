@@ -2,16 +2,16 @@ import { Inter } from "next/font/google";
 import DashBoard from "@/components/layouts/DashBoard";
 import SoundControlBar from "@/features/audioPlayer/components/SoundControlBar";
 import { Box } from "@mui/material";
-import LookingForSound from "@/features/lookingForSound/components/LookingForSound";
+import LookingForSounds from "@/features/lookingForSounds/components/LookingForSounds";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main>
+    <main style={{ backgroundColor: "green" }}>
       <DashBoard>
-        <Box sx={{ display: "flex" }}>
-          <LookingForSound />
+        <Box sx={{ display: "flex", width: "100%", backgroundColor: "red" }}>
+          <LookingForSounds />
         </Box>
         <SoundControlBar />
       </DashBoard>

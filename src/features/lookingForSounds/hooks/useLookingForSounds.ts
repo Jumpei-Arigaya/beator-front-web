@@ -3,7 +3,7 @@ import { useState } from "react";
 /**
  * サウンド募集中の楽曲一覧コンポーネントに使用するカスタムフック
  */
-export const useLookingForSound = () => {
+export const useLookingForSounds = () => {
   const [play, setPlay] = useState(false);
 
   /**
