@@ -18,22 +18,19 @@ type AudioControlProps = {
 /**
  * オーディオコントロールを行うコンポーネント
  */
-export const AudioControl = ({
-  play,
-  handleAudioControl,
-}: AudioControlProps) => {
+export const AudioControl = (props: AudioControlProps) => {
   return (
     <>
-      {play ? (
+      {props.play ? (
         <NotStartedIcon
           sx={{ fontSize: 50, alignItems: "flex-end" }}
           color="disabled"
-          onClick={() => handleAudioControl()}
+          onClick={() => props.handleAudioControl()}
         />
       ) : (
         <PlayCircleIcon
           sx={{ fontSize: 50, alignItems: "flex-end" }}
-          onClick={() => handleAudioControl()}
+          onClick={() => props.handleAudioControl()}
         />
       )}
     </>

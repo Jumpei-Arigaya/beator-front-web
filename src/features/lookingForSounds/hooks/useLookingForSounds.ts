@@ -1,10 +1,11 @@
 import { useState } from "react";
 
 /**
- * サウンド募集中の楽曲一覧コンポーネントに使用するカスタムフック
+ * LookingForSoundsコンポーネントに使用するカスタムフック
  */
 export const useLookingForSounds = () => {
   const [play, setPlay] = useState(false);
+  const [isHoverdPostCard, setIsHoverdPostCard] = useState(false);
 
   /**
    * 再生ボタンクリック時にオーディオをコントロールする
@@ -13,5 +14,25 @@ export const useLookingForSounds = () => {
     setPlay(!play);
   };
 
-  return { play, handleAudioControl };
+  /**
+   * PostCardコンポーネントホバー時のイベント関数
+   */
+  const handleMouseEnterPostCard = () => {
+    setIsHoverdPostCard(true);
+  };
+
+  /**
+   * PostCardコンポーネントホバー解除時のイベント関数
+   */
+  const handleMouseLeavePostCard = () => {
+    setIsHoverdPostCard(false);
+  };
+
+  return {
+    play,
+    handleAudioControl,
+    isHoverdPostCard,
+    handleMouseEnterPostCard,
+    handleMouseLeavePostCard,
+  };
 };

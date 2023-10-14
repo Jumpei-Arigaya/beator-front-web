@@ -18,6 +18,18 @@ type PostCardProps = {
    * オーディオコントロールクリック時のイベント関数
    */
   handleAudioControl: () => void;
+  /**
+   * オーディオコントロールの表示状態
+   */
+  isHoverdPostCard: boolean;
+  /**
+   * PostCardコンポーネントホバー時のイベント関数
+   */
+  handleMouseEnterPostCard: () => void;
+  /**
+   * PostCardコンポーネントホバー解除時のイベント関数
+   */
+  handleMouseLeavePostCard: () => void;
 };
 
 /**
@@ -27,12 +39,18 @@ export const PostCard = (props: PostCardProps) => {
   return (
     <Card
       sx={{
-        minWidth: "210px",
-        minHeight: "210px",
         width: "220px",
         height: "220px",
+        marginRight: "10px",
         cursor: "pointer",
+        position: "relative",
+        transition: "background-color 0.3s",
+        "&:hover": {
+          backgroundColor: "rgba(240, 240, 240, 0.5)",
+        },
       }}
+      onMouseEnter={props.handleMouseEnterPostCard}
+      onMouseLeave={props.handleMouseLeavePostCard}
     >
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
@@ -57,9 +75,18 @@ export const PostCard = (props: PostCardProps) => {
             <Typography variant="body2">ジャンル</Typography>
             <Chip label="ロック" color="primary" size="small" />
           </Box>
-          <Box sx={{ marginTop: "22px" }}>
-            <AudioControl {...props} />
-          </Box>
+        </Box>
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: "10px",
+            right: "10px",
+            zIndex: 1,
+            opacity: props.isHoverdPostCard || props.play ? 1 : 0,
+            transition: "opacity 0.3s",
+          }}
+        >
+          <AudioControl {...props} />
         </Box>
       </CardContent>
     </Card>
