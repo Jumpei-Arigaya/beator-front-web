@@ -1,11 +1,8 @@
-import { Inter } from "next/font/google";
-import DashBoard from "@/components/layouts/DashBoard";
+import { NextPage } from "next";
+import { DashBoard } from "@/components/layouts/DashBoard";
 import SoundControlBar from "@/features/audioPlayer/components/SoundControlBar";
 
-
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+export const Profile: NextPage = () => {
   return (
     <main>
       <DashBoard>
@@ -14,4 +11,4 @@ export default function Home() {
       </DashBoard>
     </main>
   );
-}
+};
