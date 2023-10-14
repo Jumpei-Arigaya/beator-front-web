@@ -110,11 +110,10 @@ export const Header = () => {
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
-              <ListItemText primary="ホーム画面" />{" "}
+              <ListItemText primary="ホーム画面" />
             </ListItemButton>
           </Link>
         </ListItem>
-        {/* 楽曲一覧のリストアイテム */}
         <ListItem disablePadding>
           <Link
             href="/song_list"
@@ -122,9 +121,9 @@ export const Header = () => {
           >
             <ListItemButton>
               <ListItemIcon>
-                <LibraryMusicIcon /> {/* 楽曲一覧アイコン */}
+                <LibraryMusicIcon />
               </ListItemIcon>
-              <ListItemText primary="楽曲一覧" /> {/* テキスト: "楽曲一覧" */}
+              <ListItemText primary="楽曲一覧" />
             </ListItemButton>
           </Link>
         </ListItem>
@@ -135,10 +134,9 @@ export const Header = () => {
           >
             <ListItemButton>
               <ListItemIcon>
-                <LyricsIcon /> {/* 楽曲新規制作:アイコン */}
+                <LyricsIcon />
               </ListItemIcon>
               <ListItemText primary="楽曲新規制作" />{" "}
-              {/* テキスト: "楽曲新規制作" */}
             </ListItemButton>
           </Link>
         </ListItem>
@@ -149,10 +147,9 @@ export const Header = () => {
           >
             <ListItemButton>
               <ListItemIcon>
-                <AccountBoxIcon /> {/* プロフィールアイコン */}
+                <AccountBoxIcon />
               </ListItemIcon>
               <ListItemText primary="プロフィール" />{" "}
-              {/* テキスト: "プロフィール" */}
             </ListItemButton>
           </Link>
         </ListItem>
