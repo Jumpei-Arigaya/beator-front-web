@@ -35,7 +35,7 @@ type PostCardProps = {
 /**
  * 楽曲情報投稿コンポーネント
  */
-export const PostCard = (props: PostCardProps) => {
+export const PostCard: React.FC<PostCardProps> = (props) => {
   return (
     <Card
       sx={{

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import PlaySkipControls from "./PlaySkipControls";
+import { PlaySkipControls } from "./PlaySkipControls";
 
 const meta = {
   title: "features/playSong/components/PlaySkipControls",

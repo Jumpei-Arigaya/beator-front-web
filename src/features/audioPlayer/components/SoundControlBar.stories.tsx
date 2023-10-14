@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import SoundControlBar from "./SoundControlBar";
+import { SoundControlBar } from "./SoundControlBar";
 
 const meta = {
   title: "features/playSong/components/SoundControlBar",

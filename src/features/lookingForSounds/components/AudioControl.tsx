@@ -18,7 +18,7 @@ type AudioControlProps = {
 /**
  * オーディオコントロールを行うコンポーネント
  */
-export const AudioControl = (props: AudioControlProps) => {
+export const AudioControl: React.FC<AudioControlProps> = (props) => {
   return (
     <>
       {props.play ? (

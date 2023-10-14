@@ -1,10 +1,10 @@
-import VolumeSlider from "./VolumeSlider";
+import { VolumeSlider } from "./VolumeSlider";
+import { PlaySkipControls } from "./PlaySkipControls";
+import { PlayBackBar } from "./PlayBackBar";
+import { TrackCard } from "./TrackCard";
 import Box from "@mui/material/Box";
-import PlaySkipControls from "./PlaySkipControls";
-import PlayBackBar from "./PlayBackBar";
-import TrackCard from "./TrackCard";
 
-export default function SoundControlBar() {
+export const SoundControlBar: React.FC = () => {
   return (
     <Box
       sx={{
@@ -27,4 +27,4 @@ export default function SoundControlBar() {
       <VolumeSlider />
     </Box>
   );
-}
+};

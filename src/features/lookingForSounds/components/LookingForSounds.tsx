@@ -5,7 +5,7 @@ import { Grid, Typography, Button, Box, Paper } from "@mui/material";
 /**
  * サウンド募集中の楽曲一覧コンポーネント
  */
-const LookingForSounds = () => {
+export const LookingForSounds: React.FC = () => {
   const {
     play,
     handleAudioControl,
@@ -44,5 +44,3 @@ const LookingForSounds = () => {
     </Paper>
   );
 };
-
-export default LookingForSounds;

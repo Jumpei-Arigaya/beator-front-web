@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
 import { styled, useTheme } from "@mui/material/styles";
 
-const PlayBackBar = () => {
+export const PlayBackBar: React.FC = () => {
   const theme = useTheme();
   const duration = 200; // seconds
   const [position, setPosition] = useState(32);
@@ -80,5 +80,3 @@ const PlayBackBar = () => {
     </Box>
   );
 };
-
-export default PlayBackBar;
