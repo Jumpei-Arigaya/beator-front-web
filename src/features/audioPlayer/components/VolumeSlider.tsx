@@ -1,8 +1,8 @@
-import { Slider, Stack, useTheme } from "@mui/material";
 import VolumeUpRounded from "@mui/icons-material/VolumeUpRounded";
 import VolumeDownRounded from "@mui/icons-material/VolumeDownRounded";
+import { Slider, Stack, useTheme } from "@mui/material";
 
-const VolumeSlider = () => {
+export const VolumeSlider: React.FC = () => {
   const theme = useTheme();
   const lightIconColor =
     theme.palette.mode === "dark" ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.4)";
@@ -41,5 +41,3 @@ const VolumeSlider = () => {
     </Stack>
   );
 };
-
-export default VolumeSlider;

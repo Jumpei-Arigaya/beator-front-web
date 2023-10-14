@@ -1,7 +1,7 @@
 import { NextPage } from "next";
+import { Header } from "../elements/Header";
 import Box from "@mui/material/Box";
-import Header from "../elements/Header";
-import SoundControlBar from "@/features/audioPlayer/components/SoundControlBar";
+import { SoundControlBar } from "@/features/audioPlayer/components/SoundControlBar";
 
 type LayoutProps = {
   children: React.ReactNode;

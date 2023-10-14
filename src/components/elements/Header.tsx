@@ -50,7 +50,7 @@ const AppBar = styled(MuiAppBar, {
   }),
 }));
 
-const Header = () => {
+export const Header = () => {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
 
@@ -160,5 +160,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;

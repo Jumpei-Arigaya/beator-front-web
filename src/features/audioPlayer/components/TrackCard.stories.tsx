@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import TrackCard from "./TrackCard";
+import { TrackCard } from "./TrackCard";
 
 const meta = {
   title: "features/playSong/components/TrackCard",

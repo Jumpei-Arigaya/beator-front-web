@@ -6,7 +6,7 @@ import FastForwardRounded from "@mui/icons-material/FastForwardRounded";
 import { Box, useTheme } from "@mui/material";
 import FastRewindRounded from "@mui/icons-material/FastRewindRounded";
 
-const PlaySkipControls = () => {
+export const PlaySkipControls: React.FC = () => {
   const theme = useTheme();
   const [paused, setPaused] = useState(false);
   const mainIconColor = theme.palette.mode === "dark" ? "#fff" : "#000";
@@ -43,5 +43,3 @@ const PlaySkipControls = () => {
     </>
   );
 };
-
-export default PlaySkipControls;
