@@ -15,11 +15,11 @@ const LookingForSounds = () => {
   } = useLookingForSounds();
 
   return (
-    <Paper>
+    <Paper sx={{ margin: "20px" }}>
       <Grid
         container
         alignItems="center"
-        sx={{ width: "100%", padding: "10px", margin: "20px" }}
+        sx={{ width: "100%", padding: "10px" }}
       >
         <Grid item xs={6}>
           <Typography variant="subtitle1">パートを募集中の楽曲</Typography>
@@ -27,8 +27,8 @@ const LookingForSounds = () => {
         <Grid item xs={6} style={{ textAlign: "right" }}>
           <Typography variant="subtitle1">もっと見る</Typography>
         </Grid>
-        <Grid container item xs={12} sx={{ mt: "2px" }}>
-          {[...Array(6)].map((_, index) => (
+        <Grid container item xs={12} sx={{ marginTop: "10px" }}>
+          {[...Array(4)].map((_, index) => (
             <Grid item key={index}>
               <PostCard
                 play={play}

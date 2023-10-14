@@ -41,7 +41,7 @@ export const PostCard = (props: PostCardProps) => {
       sx={{
         width: "220px",
         height: "220px",
-        marginRight: "10px",
+        marginRight: "20px",
         cursor: "pointer",
         position: "relative",
         transition: "background-color 0.3s",
