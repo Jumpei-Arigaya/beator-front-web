@@ -1,12 +1,12 @@
 import { NextPage } from "next";
 import { DashBoard } from "@/components/layouts/DashBoard";
 
-const Profile: NextPage = () => {
+const CreateSong: NextPage = () => {
   return (
     <main>
-      <DashBoard>プロフィール画面</DashBoard>
+      <DashBoard>新規楽曲制作画面</DashBoard>
     </main>
   );
 };
 
-export default Profile;
+export default CreateSong;

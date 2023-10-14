@@ -117,7 +117,7 @@ const Header = () => {
         {/* 楽曲一覧のリストアイテム */}
         <ListItem disablePadding>
           <Link
-            href="/song-list"
+            href="/song_list"
             style={{ color: "black", textDecoration: "none" }}
           >
             <ListItemButton>
@@ -130,7 +130,7 @@ const Header = () => {
         </ListItem>
         <ListItem disablePadding>
           <Link
-            href="/create-song"
+            href="/create_song"
             style={{ color: "black", textDecoration: "none" }}
           >
             <ListItemButton>
