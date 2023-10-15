@@ -1,6 +1,6 @@
 import * as React from "react";
 import Avatar from "@mui/material/Avatar";
 
-export default function ProfileIcon() {
+export const ProfileIcon: React.FC = () => {
   return <Avatar alt="profile-image" src="/face-me.jpg" />;
-}
+};

@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import { DashBoard } from "@/components/layouts/DashBoard";
-import ProfileIcon from "@/features/Profile/components/ProfileIcon";
+import { ProfileIcon } from "@/features/Profile/components/ProfileIcon";
 
 const Profile: NextPage = () => {
   return (
