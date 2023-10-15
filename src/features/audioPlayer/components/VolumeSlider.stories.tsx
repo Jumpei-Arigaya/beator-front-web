@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import VolumeSlider from "./VolumeSlider";
+import { VolumeSlider } from "./VolumeSlider";
 
 const meta = {
   title: "features/playSong/components/VolumeSlider",

@@ -2,7 +2,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 
-const TrackCard = () => {
+export const TrackCard: React.FC = () => {
   return (
     <Box
       sx={{
@@ -25,5 +25,3 @@ const TrackCard = () => {
     </Box>
   );
 };
-
-export default TrackCard;

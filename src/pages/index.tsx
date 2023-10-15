@@ -1,15 +1,15 @@
-import { Inter } from "next/font/google";
-import DashBoard from "@/components/layouts/DashBoard";
-import SoundControlBar from "@/features/audioPlayer/components/SoundControlBar";
+import { NextPage } from "next";
+import { DashBoard } from "@/components/layouts/DashBoard";
+import { LookingForSounds } from "@/features/lookingForSounds/components/LookingForSounds";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <main>
       <DashBoard>
-        <SoundControlBar />
+        <LookingForSounds />
       </DashBoard>
     </main>
   );
-}
+};
+
+export default Home;

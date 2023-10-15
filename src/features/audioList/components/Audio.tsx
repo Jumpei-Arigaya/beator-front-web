@@ -10,7 +10,7 @@ import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
 
-export default function Audio() {
+export const Audio: React.FC = () => {
   const theme = useTheme();
 
   return (
@@ -56,4 +56,4 @@ export default function Audio() {
       />
     </Card>
   );
-}
+};
