@@ -13,7 +13,6 @@ const Home: NextPage = () => {
             justifyContent: "center",
             alignItems: "center",
             height: `calc(100vh - 64px)`,
-            overflowY: "hidden",
           }}
         >
           <Box
@@ -21,6 +20,7 @@ const Home: NextPage = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              marginTop: "-32px",
             }}
           >
             <Typography variant="h3">404</Typography>
