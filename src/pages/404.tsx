@@ -21,13 +21,12 @@ const Home: NextPage = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              marginTop: "-32px",
             }}
           >
             <Typography variant="h3">404</Typography>
             <Typography variant="h5">NOT FOUND</Typography>
           </Box>
-          <Typography variant="body1">
+          <Typography variant="body1" sx={{ marginTop: "35px" }}>
             お探しのページは見つかりません
           </Typography>
         </Box>
