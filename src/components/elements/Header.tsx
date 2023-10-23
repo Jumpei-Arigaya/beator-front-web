@@ -50,7 +50,7 @@ const AppBar = styled(MuiAppBar, {
   }),
 }));
 
-export const Header = () => {
+export const Header: React.FC = () => {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
 

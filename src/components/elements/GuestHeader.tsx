@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import { AppBar } from "@mui/material";
 
-export const GuestHeader = () => {
+export const GuestHeader: React.FC = () => {
   return (
     <div>
       <CssBaseline />
