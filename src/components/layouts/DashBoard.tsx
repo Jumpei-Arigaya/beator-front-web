@@ -1,4 +1,3 @@
-import { NextPage } from "next";
 import { Header } from "../elements/Header";
 import Box from "@mui/material/Box";
 import { SoundControlBar } from "@/features/audioPlayer/components/SoundControlBar";
@@ -7,7 +6,7 @@ type LayoutProps = {
   children: React.ReactNode;
 };
 
-export const DashBoard: NextPage<LayoutProps> = (props) => {
+export const DashBoard: React.FC<LayoutProps> = (props) => {
   return (
     <Box sx={{ display: "flex" }}>
       <Header />
