@@ -12,7 +12,8 @@ const Home: NextPage = () => {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            height: `calc(100vh - 64px)`,
+            marginTop: "-64px",
+            height: "100vh",
           }}
         >
           <Box
