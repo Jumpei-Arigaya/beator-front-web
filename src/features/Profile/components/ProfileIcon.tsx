@@ -3,6 +3,17 @@ import Avatar from "@mui/material/Avatar";
 /**
  * プロフィールに表示するアイコンコンポーネント
  */
-export const ProfileIcon: React.FC = () => {
-  return <Avatar alt="profile-image" src="/face-me.jpg" />;
+
+type ProfileIconProps = {
+  width?: number;
+  height?: number;
+};
+
+export const ProfileIcon: React.FC<ProfileIconProps> = ({
+  width = 64,
+  height = 64,
+}) => {
+  return (
+    <Avatar alt="profile-image" src="/face-me.jpg" sx={{ width, height }} />
+  );
 };

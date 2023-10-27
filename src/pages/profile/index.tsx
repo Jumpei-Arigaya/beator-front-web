@@ -7,7 +7,7 @@ const Profile: NextPage = () => {
   return (
     <main>
       <DashBoard>
-        <ProfileIcon />
+        <ProfileIcon width={125} height={125} />
         <Box>
           <Typography fontSize="h6.fontSize">test0523</Typography>
           <Typography fontSize="h5.fontSize">のんちまる</Typography>
