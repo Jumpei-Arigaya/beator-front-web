@@ -9,7 +9,7 @@ export const TantouGakki: React.FC<TantouGakkiProps> = ({}) => {
     <>
       <Typography
         fontSize="h7.fontSize"
-        sx={{ lineHeight: 1.5, margin: "0 1em", marginTop: 1 }}
+        sx={{ lineHeight: 2, margin: "0 1em", marginTop: 1 }}
       >
         担当楽器
       </Typography>
