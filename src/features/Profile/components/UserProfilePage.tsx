@@ -7,9 +7,10 @@ import { Box, Typography } from "@mui/material";
 import { SocialConnection } from "@/features/Profile/components/SocialConnection";
 import { Horizon } from "./Horizon";
 import { Introduction } from "./Introduction";
-import { PostCard } from "@/features/lookingForSounds/components/PostCard";
-import CreateSong from "@/pages/create_song";
+
 import { CreatedSongs } from "./CreatedSongs";
+
+import { TantouGakki } from "./TantouGakki";
 
 /**
  * プロフィールに表示するプロフィール画面
@@ -31,7 +32,10 @@ export const UserProfilePage: React.FC<UserProfilePageProps> = ({}) => {
               </Typography>
             </Box>
           </Box>
-          <SocialConnection />
+          <Box sx={{ display: "flex" }}>
+            <SocialConnection />
+            <TantouGakki />
+          </Box>
           <Horizon />
           <Introduction />
           <CreatedSongs />
