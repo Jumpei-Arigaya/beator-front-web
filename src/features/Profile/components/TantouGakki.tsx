@@ -9,7 +9,7 @@ export const TantouGakki: React.FC<TantouGakkiProps> = ({}) => {
     <>
       <Typography
         fontSize="h7.fontSize"
-        sx={{ lineHeight: 1.5, margin: "0 1em" }}
+        sx={{ lineHeight: 1.5, margin: "0 1em", marginTop: 1 }}
       >
         担当楽器
       </Typography>
@@ -18,11 +18,12 @@ export const TantouGakki: React.FC<TantouGakkiProps> = ({}) => {
         flexWrap="wrap"
         sx={{
           maxWidth: "800px",
-          marginBottom: 0.3,
+          marginBottom: 0.5,
+          marginTop: 1,
         }}
       >
-        <Stack direction="row" flexWrap="wrap">
-          <Chip label="ギター" color="secondary" sx={{ marginBottom: 0.3 }} />
+        <Stack direction="row" flexWrap="wrap" sx={{ height: 100 }}>
+          <Chip label="ギター" color="secondary" />
           <Chip label="ドラム" color="secondary" />
           <Chip label="サックス" color="secondary" />
           <Chip label="ピアノ" color="secondary" />
@@ -35,6 +36,17 @@ export const TantouGakki: React.FC<TantouGakkiProps> = ({}) => {
           <Chip label="DJ" color="secondary" />
           <Chip label="キーボード" color="secondary" />
           <Chip label="マラカス" color="secondary" />
+          <Chip label="サックス" color="secondary" />
+          <Chip label="トランペット" color="secondary" />
+          <Chip label="ホルン" color="secondary" />
+          <Chip label="トロンボーン" color="secondary" />
+          <Chip label="ピッコロ" color="secondary" />
+          <Chip label="フルート" color="secondary" />
+          <Chip label="アルトサックス" color="secondary" />
+          <Chip label="ソロギター" color="secondary" />
+          <Chip label="木琴" color="secondary" />
+          <Chip label="鉄琴" color="secondary" />
+          <Chip label="パーカッション" color="secondary" />
         </Stack>
       </Stack>
     </>
