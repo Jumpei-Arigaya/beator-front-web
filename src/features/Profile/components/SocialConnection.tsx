@@ -3,7 +3,6 @@ import { Box, Typography } from "@mui/material";
 /**
  * プロフィールに表示するフォロー・フォロワー数コンポーネント
  */
-
 type SocialConnectionProps = {};
 
 export const SocialConnection: React.FC<SocialConnectionProps> = ({}) => {
