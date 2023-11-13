@@ -7,6 +7,9 @@ import { Box, Typography } from "@mui/material";
 import { SocialConnection } from "@/features/Profile/components/SocialConnection";
 import { Horizon } from "./Horizon";
 import { Introduction } from "./Introduction";
+import { PostCard } from "@/features/lookingForSounds/components/PostCard";
+import CreateSong from "@/pages/create_song";
+import { CreatedSongs } from "./CreatedSongs";
 
 /**
  * プロフィールに表示するプロフィール画面
@@ -31,6 +34,7 @@ export const UserProfilePage: React.FC<UserProfilePageProps> = ({}) => {
           <SocialConnection />
           <Horizon />
           <Introduction />
+          <CreatedSongs />
         </Box>
       </DashBoard>
     </main>
