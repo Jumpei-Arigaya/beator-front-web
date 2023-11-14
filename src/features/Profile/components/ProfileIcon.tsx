@@ -3,7 +3,6 @@ import Avatar from "@mui/material/Avatar";
 /**
  * プロフィールに表示するアイコンコンポーネント
  */
-
 type ProfileIconProps = {
   width?: number;
   height?: number;

@@ -3,7 +3,6 @@ import { Typography } from "@mui/material";
 /**
  * プロフィールに表示する自己紹介文コンポーネント
  */
-
 type IntroductionProps = {};
 
 export const Introduction: React.FC<IntroductionProps> = ({}) => {

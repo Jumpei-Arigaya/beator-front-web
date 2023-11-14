@@ -3,7 +3,6 @@ import { Divider } from "@mui/material";
 /**
  * プロフィールに表示する水平線コンポーネント
  */
-
 type HorizonProps = {
   orientation?: "horizontal" | "vertical";
   style?: React.CSSProperties;

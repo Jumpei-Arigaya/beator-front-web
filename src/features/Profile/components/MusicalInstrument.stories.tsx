@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { TantouGakki } from "./TantouGakki";
+import { TantouGakki } from "./MusicalInstrument";
 
 const meta = {
   title: "features/Profile/components/TantouGakki",
