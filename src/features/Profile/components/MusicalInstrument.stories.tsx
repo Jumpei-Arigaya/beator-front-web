@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { TantouGakki } from "./MusicalInstrument";
+import { MusicalInstrument } from "./MusicalInstrument";
 
 const meta = {
-  title: "features/Profile/components/TantouGakki",
-  component: TantouGakki,
-} satisfies Meta<typeof TantouGakki>;
+  title: "features/Profile/components/",
+  component: MusicalInstrument,
+} satisfies Meta<typeof MusicalInstrument>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

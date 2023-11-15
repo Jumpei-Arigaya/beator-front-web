@@ -6,7 +6,7 @@ import { SocialConnection } from "@/features/Profile/components/SocialConnection
 import { Horizon } from "./Horizon";
 import { Introduction } from "./Introduction";
 import { CreatedSongs } from "./CreatedSongs";
-import { TantouGakki } from "./MusicalInstrument";
+import { MusicalInstrument } from "./MusicalInstrument";
 
 /**
  * プロフィールに表示するプロフィール画面
@@ -29,7 +29,7 @@ export const UserProfile: React.FC<UserProfileProps> = ({}) => {
           </Box>
           <Box sx={{ display: "flex" }}>
             <SocialConnection />
-            <TantouGakki />
+            <MusicalInstrument />
           </Box>
           <Horizon />
           <Introduction />

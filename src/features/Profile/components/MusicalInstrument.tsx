@@ -2,9 +2,9 @@ import { Typography, Stack, Chip } from "@mui/material";
 /**
  * プロフィールに表示する担当楽器のコンポーネント
  */
-type TantouGakkiProps = {};
+type MusicalInstrumentProps = {};
 
-export const TantouGakki: React.FC<TantouGakkiProps> = ({}) => {
+export const MusicalInstrument: React.FC<MusicalInstrumentProps> = ({}) => {
   return (
     <>
       <Typography
