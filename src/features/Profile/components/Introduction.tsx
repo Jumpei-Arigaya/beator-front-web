@@ -1,10 +1,13 @@
 import { Typography } from "@mui/material";
 
 /**
- * プロフィールに表示する自己紹介文コンポーネント
+ * IntroductionのコンポーネントのPropsの型定義
  */
 type IntroductionProps = {};
 
+/**
+ * 自己紹介文を表示させるコンポーネント
+ */
 export const Introduction: React.FC<IntroductionProps> = ({}) => {
   return (
     <Typography

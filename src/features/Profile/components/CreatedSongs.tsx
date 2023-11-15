@@ -3,13 +3,16 @@ import { Horizon } from "./Horizon";
 import { PostCard } from "@/features/lookingForSounds/components/PostCard";
 
 /**
- * プロフィールに表示する投稿した楽曲一覧のコンポーネント
+ * CreatedSongsのコンポーネントのPropsの型定義
  */
 type CreatedSongsProps = {
   width?: number;
   height?: number;
 };
 
+/**
+ * 投稿した楽曲一覧を表示させるコンポーネント
+ */
 export const CreatedSongs: React.FC<CreatedSongsProps> = ({}) => {
   return (
     <>

@@ -9,10 +9,13 @@ import { CreatedSongs } from "./CreatedSongs";
 import { MusicalInstrument } from "./MusicalInstrument";
 
 /**
- * プロフィールに表示するプロフィール画面
+ * UserProfileのコンポーネントのPropsの型定義
  */
 type UserProfileProps = {};
 
+/**
+ * プロフィール画面を表示させるコンポーネント
+ */
 export const UserProfile: React.FC<UserProfileProps> = ({}) => {
   return (
     <main>

@@ -1,9 +1,12 @@
 import { Typography, Stack, Chip } from "@mui/material";
 /**
- * プロフィールに表示する担当楽器のコンポーネント
+ * MusicalInstrumentのコンポーネントのPropsの型定義
  */
 type MusicalInstrumentProps = {};
 
+/**
+ * 担当楽器のチップを表示させるコンポーネント
+ */
 export const MusicalInstrument: React.FC<MusicalInstrumentProps> = ({}) => {
   return (
     <>
