@@ -8,6 +8,12 @@ import TextField from "@mui/material/TextField";
 type InfoExitProps = {};
 
 export const InfoExit: React.FC<InfoExitProps> = ({}) => {
+  const [textValue, setTextValue] = React.useState("");
+  const handleTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.value.length <= 180) {
+      setTextValue(event.target.value);
+    }
+  };
   return (
     <Box
       component="form"
@@ -23,6 +29,10 @@ export const InfoExit: React.FC<InfoExitProps> = ({}) => {
           label="Self introduction"
           placeholder="Maximum of 180 characters"
           self-introduction
+          multiline
+          rows={4}
+          value={textValue}
+          onChange={handleTextChange}
         />
       </div>
     </Box>

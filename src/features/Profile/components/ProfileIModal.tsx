@@ -21,8 +21,8 @@ const overlayStyle = {
   left: 0,
   width: "100%",
   height: "100%",
-  background: "rgba(0, 0, 0, 0.7)", // 黒色の半透明背景
-  zIndex: 999, // モーダルよりも手前に表示
+  background: "rgba(0, 0, 0, 0.7)",
+  zIndex: 999,
 };
 const style = {
   position: "absolute",
@@ -30,9 +30,9 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 1000,
-  height: 600,
-  bgcolor: "#f5f5f5", // 背景色を青色に変更
-  color: "#000", // テキストの色を白に設定（任意）
+  height: 700,
+  bgcolor: "#f5f5f5",
+  color: "#000",
   border: "1px solid #000",
   boxShadow: 24,
   p: 4,
@@ -81,8 +81,29 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({}) => {
           </Box>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             ここに編集する機能をつける
-            <ProfileIcon />
-            <IconUpload />
+            <Box
+              sx={{
+                display: "flex",
+                width: "20%",
+                gap: "5px",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <ProfileIcon width={90} height={90} />
+              </div>
+              <div
+                style={{
+                  width: 180,
+                  height: 25,
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <IconUpload />
+              </div>
+            </Box>
             <Box
               sx={{
                 display: "flex",
