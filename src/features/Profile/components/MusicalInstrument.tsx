@@ -1,4 +1,5 @@
 import { Typography, Stack, Chip } from "@mui/material";
+
 /**
  * MusicalInstrumentのコンポーネントのPropsの型定義
  */
