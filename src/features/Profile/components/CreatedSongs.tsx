@@ -5,10 +5,7 @@ import { PostCard } from "@/features/lookingForSounds/components/PostCard";
 /**
  * CreatedSongsのコンポーネントのPropsの型定義
  */
-type CreatedSongsProps = {
-  width?: number;
-  height?: number;
-};
+type CreatedSongsProps = {};
 
 /**
  * 投稿した楽曲一覧を表示させるコンポーネント

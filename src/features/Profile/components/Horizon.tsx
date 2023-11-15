@@ -4,6 +4,9 @@ import { Divider } from "@mui/material";
  * HorizonのコンポーネントのPropsの型定義
  */
 type HorizonProps = {
+  /**
+   * 水平線の表示サイズ
+   */
   orientation?: "horizontal" | "vertical";
   style?: React.CSSProperties;
 };
