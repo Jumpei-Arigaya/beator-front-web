@@ -1,5 +1,4 @@
 import { Typography } from "@mui/material";
-import Avatar from "@mui/material/Avatar";
 import { Horizon } from "./Horizon";
 import { PostCard } from "@/features/lookingForSounds/components/PostCard";
 
