@@ -3,11 +3,14 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
 /**
- * プロフィールモーダルに表示する自己紹介編集コンポーネント
+ * InfoEditコンポーネントのPropsの型定義
  */
-type InfoExitProps = {};
+type InfoEditProps = {};
 
-export const InfoExit: React.FC<InfoExitProps> = ({}) => {
+/**
+ * 自己紹介文テキストフィールドコンポーネント
+ */
+export const InfoEdit: React.FC<InfoEditProps> = ({}) => {
   const [textValue, setTextValue] = React.useState("");
   const handleTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.value.length <= 180) {

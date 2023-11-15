@@ -10,7 +10,8 @@ import { TextField } from "@mui/material";
 import { IconUpload } from "./IconUpload";
 import { ProfileIcon } from "./ProfileIcon";
 import { ChoiceInstrument } from "./ChoiceInstrument";
-import { InfoExit } from "./InfoExit";
+import { InfoEdit } from "./InfoEdit";
+import { ProfileHeader } from "./ProfileHeader";
 
 /**
  * プロフィールに表示するアイコンコンポーネント
@@ -75,48 +76,57 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({}) => {
               component="h2"
               sx={{ marginTop: "3px" }}
             >
-              プロフィール編集
+              <ProfileHeader />
             </Typography>
             <SaveAltIcon sx={{ fontSize: "35px", marginLeft: "660px" }} />
           </Box>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            ここに編集する機能をつける
-            <Box
-              sx={{
+            <div
+              style={{
                 display: "flex",
-                width: "20%",
-                gap: "5px",
-                flexDirection: "column",
-                alignItems: "center",
+                justifyContent: "center",
+                marginTop: "25px",
               }}
             >
-              <div style={{ display: "flex", justifyContent: "center" }}>
-                <ProfileIcon width={90} height={90} />
-              </div>
-              <div
-                style={{
-                  width: 180,
-                  height: 25,
+              <Box
+                sx={{
                   display: "flex",
-                  justifyContent: "center",
+                  gap: "5px",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}
               >
+                <ProfileIcon width={90} height={90} />
                 <IconUpload />
-              </div>
-            </Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "70%",
+                  gap: "10px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextField label="UserID" style={{ width: "70%" }} />
+                <TextField label="Name" style={{ width: "70%" }} />
+              </Box>
+            </div>
+
             <Box
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                gap: "10px",
-                width: "70%",
+                gap: "50px",
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop: "50px",
               }}
             >
-              <TextField label="UserID" style={{ width: "70%" }} />
-              <TextField label="Name" style={{ width: "70%" }} />
+              <ChoiceInstrument />
+              <InfoEdit />
             </Box>
-            <ChoiceInstrument />
-            <InfoExit />
           </Typography>
         </Box>
       </Modal>
