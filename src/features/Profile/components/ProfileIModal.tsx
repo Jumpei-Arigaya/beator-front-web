@@ -14,7 +14,7 @@ import { InfoEdit } from "./InfoEdit";
 import { ProfileHeader } from "./ProfileHeader";
 
 /**
- * プロフィールに表示するアイコンコンポーネント
+ * プロフィールに表示するモーダルコンポーネント
  */
 const overlayStyle = {
   position: "fixed",

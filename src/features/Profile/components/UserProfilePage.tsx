@@ -1,15 +1,11 @@
 import React from "react";
-
 import { DashBoard } from "@/components/layouts/DashBoard";
 import { ProfileIcon } from "@/features/Profile/components/ProfileIcon";
 import { Box, Typography } from "@mui/material";
-
 import { SocialConnection } from "@/features/Profile/components/SocialConnection";
 import { Horizon } from "./Horizon";
 import { Introduction } from "./Introduction";
-
 import { CreatedSongs } from "./CreatedSongs";
-
 import { TantouGakki } from "./TantouGakki";
 import { ProfileModal } from "./ProfileIModal";
 import { Settings } from "@mui/icons-material";

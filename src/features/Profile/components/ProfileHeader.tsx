@@ -1,11 +1,11 @@
 import CssBaseline from "@mui/material/CssBaseline";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-
-import Link from "next/link";
-
 import { AppBar } from "@mui/material";
 
+/**
+ * プロフィールモダール時に表示するヘッダコンポーネント
+ */
 export const ProfileHeader: React.FC = () => {
   return (
     <div>
