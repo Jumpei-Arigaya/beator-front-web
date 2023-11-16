@@ -1,8 +1,24 @@
 import Avatar from "@mui/material/Avatar";
 
 /**
- * プロフィールに表示するアイコンコンポーネント
+ * ProfileIconコンポーネントのPropsの型定義
  */
-export const ProfileIcon: React.FC = () => {
-  return <Avatar alt="profile-image" src="/face-me.jpg" />;
+type ProfileIconProps = {
+  /**
+   * アイコンの表示サイズ
+   */
+  width?: number;
+  height?: number;
+};
+
+/**
+ * アイコンを表示させるコンポーネント
+ */
+export const ProfileIcon: React.FC<ProfileIconProps> = ({
+  width = 64,
+  height = 64,
+}) => {
+  return (
+    <Avatar alt="profile-image" src="/face-me.jpg" sx={{ width, height }} />
+  );
 };
