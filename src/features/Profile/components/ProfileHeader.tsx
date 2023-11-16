@@ -12,7 +12,7 @@ export const ProfileHeader: React.FC = () => {
       <CssBaseline />
       <AppBar position="fixed">
         <Toolbar>
-          <Typography variant="h6" noWrap component="div">
+          <Typography variant="h6" noWrap component="div" marginLeft={10}>
             Edit Profile
           </Typography>
         </Toolbar>

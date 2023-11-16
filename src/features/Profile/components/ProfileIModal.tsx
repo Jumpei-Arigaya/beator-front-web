@@ -68,24 +68,30 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({}) => {
               onClick={handleClose}
               style={{ border: "none", background: "none" }}
             >
-              <ClearIcon sx={{ fontSize: "35px", marginRight: "10px" }} />
+              <ClearIcon
+                sx={{ fontSize: "35px", marginRight: "10px", color: "white" }}
+              />
             </button>
-            <Typography
-              id="modal-modal-title"
-              variant="h6"
-              component="h2"
-              sx={{ marginTop: "3px" }}
+            <div
+              style={{
+                position: "relative",
+                zIndex: -1,
+              }}
             >
-              <ProfileHeader />
-            </Typography>
-            <SaveAltIcon sx={{ fontSize: "35px", marginLeft: "660px" }} />
+              <Typography id="modal-modal-title" variant="h6" component="h2">
+                <ProfileHeader />
+              </Typography>
+            </div>
+            <SaveAltIcon
+              sx={{ fontSize: "35px", marginLeft: "800px", color: "white" }}
+            />
           </Box>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             <div
               style={{
                 display: "flex",
                 justifyContent: "center",
-                marginTop: "25px",
+                marginTop: "50px",
               }}
             >
               <Box
