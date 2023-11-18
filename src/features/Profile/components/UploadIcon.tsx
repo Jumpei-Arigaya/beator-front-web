@@ -3,9 +3,6 @@ import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 
-/**
- * プロフィールモーダルに表示するファイルアップロードコンポーネント
- */
 const VisuallyHiddenInput = styled("input")({
   clip: "rect(0 0 0 0)",
   clipPath: "inset(50%)",
@@ -18,9 +15,12 @@ const VisuallyHiddenInput = styled("input")({
   width: 1,
 });
 
-type IconUploadProps = {};
+/**
+ * UploadIconコンポーネントのProps型定義
+ */
+type UploadIconProps = {};
 
-export const IconUpload: React.FC<IconUploadProps> = ({}) => {
+export const UploadIcon: React.FC<UploadIconProps> = ({}) => {
   return (
     <Button
       component="label"

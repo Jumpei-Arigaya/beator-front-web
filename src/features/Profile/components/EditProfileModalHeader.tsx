@@ -4,16 +4,16 @@ import Typography from "@mui/material/Typography";
 import { AppBar } from "@mui/material";
 
 /**
- * ProfileHeaderコンポーネントのPropsの型定義
+ *プロフィール編集モーダルのヘッダ
  */
-export const ProfileHeader: React.FC = () => {
+export const EditProfileModalHeader: React.FC = () => {
   return (
     <div>
       <CssBaseline />
       <AppBar position="fixed">
         <Toolbar>
           <Typography variant="h6" noWrap component="div" marginLeft={10}>
-            Edit Profile
+            プロフィール編集
           </Typography>
         </Toolbar>
       </AppBar>

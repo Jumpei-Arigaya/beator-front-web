@@ -7,16 +7,16 @@ import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
 import ClearIcon from "@mui/icons-material/Clear";
 import SaveAltIcon from "@mui/icons-material/SaveAlt";
 import { TextField } from "@mui/material";
-import { IconUpload } from "./IconUpload";
+import { UploadIcon } from "./UploadIcon";
 import { ProfileIcon } from "./ProfileIcon";
-import { ChoiceInstrument } from "./ChoiceInstrument";
+import { SelectInstruments } from "./SelectInstruments";
 import { InfoEdit } from "./InfoEdit";
-import { ProfileHeader } from "./ProfileHeader";
+import { EditProfileModalHeader } from "./EditProfileModalHeader";
 
 /**
  * プロフィールに表示するモーダルコンポーネント
  */
-type ProfileModalProps = {};
+type EditProfileModalProps = {};
 
 const overlayStyle = {
   position: "fixed",
@@ -41,7 +41,10 @@ const style = {
   p: 4,
 };
 
-export const ProfileModal: React.FC<ProfileModalProps> = ({}) => {
+/**
+ * EditProfileModalコンポーネントのPropsの型定義
+ */
+export const EditProfileModal: React.FC<EditProfileModalProps> = ({}) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -80,7 +83,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({}) => {
               }}
             >
               <Typography id="modal-modal-title" variant="h6" component="h2">
-                <ProfileHeader />
+                <EditProfileModalHeader />
               </Typography>
             </div>
             <SaveAltIcon
@@ -104,7 +107,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({}) => {
                 }}
               >
                 <ProfileIcon width={90} height={90} />
-                <IconUpload />
+                <UploadIcon />
               </Box>
               <Box
                 sx={{
@@ -131,7 +134,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({}) => {
                 marginTop: "50px",
               }}
             >
-              <ChoiceInstrument />
+              <SelectInstruments />
               <InfoEdit />
             </Box>
           </Typography>

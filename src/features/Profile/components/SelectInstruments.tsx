@@ -5,11 +5,6 @@ import Autocomplete from "@mui/material/Autocomplete";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 
-/**
- * 担当楽器選択ボックスに入る項目ボタン
- */
-const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
-const checkedIcon = <CheckBoxIcon fontSize="small" />;
 const MusicalInstrument = [
   { title: "ギター" },
   { title: "ドラム" },
@@ -37,11 +32,9 @@ const MusicalInstrument = [
 ];
 
 /**
- *  ChoiceInstrumentコンポーネントのProps型定義
+ *  店頭楽器選択ボックスのコンポーネント
  */
-type ChoiceInstrumentProps = {};
-
-export const ChoiceInstrument: React.FC<ChoiceInstrumentProps> = ({}) => {
+export const SelectInstruments: React.FC = ({}) => {
   return (
     <Autocomplete
       multiple
@@ -52,11 +45,12 @@ export const ChoiceInstrument: React.FC<ChoiceInstrumentProps> = ({}) => {
       renderOption={(props, option, { selected }) => (
         <li {...props}>
           <Checkbox
-            icon={icon}
-            checkedIcon={checkedIcon}
+            icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
+            checkedIcon={<CheckBoxIcon fontSize="small" />}
             style={{ marginRight: 8 }}
             checked={selected}
           />
+
           {option.title}
         </li>
       )}
