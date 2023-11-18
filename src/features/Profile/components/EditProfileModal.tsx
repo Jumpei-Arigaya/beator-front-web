@@ -10,7 +10,7 @@ import { TextField } from "@mui/material";
 import { UploadIcon } from "./UploadIcon";
 import { ProfileIcon } from "./ProfileIcon";
 import { SelectInstruments } from "./SelectInstruments";
-import { InfoEdit } from "./InfoEdit";
+import { EditIntroduction } from "./EditIntroduction";
 import { EditProfileModalHeader } from "./EditProfileModalHeader";
 
 /**
@@ -135,7 +135,7 @@ export const EditProfileModal: React.FC<EditProfileModalProps> = ({}) => {
               }}
             >
               <SelectInstruments />
-              <InfoEdit />
+              <EditIntroduction />
             </Box>
           </Typography>
         </Box>

@@ -7,7 +7,7 @@ import { Horizon } from "./Horizon";
 import { Introduction } from "./Introduction";
 import { CreatedSongs } from "./CreatedSongs";
 import { MusicalInstrument } from "./MusicalInstrument";
-import { ProfileModal } from "./ProfileIModal";
+import { EditProfileModal } from "./EditProfileModal";
 
 /**
  * UserProfileのコンポーネントのPropsの型定義
@@ -29,7 +29,7 @@ export const UserProfile: React.FC<UserProfileProps> = ({}) => {
             marginTop: 3,
           }}
         >
-          <ProfileModal />
+          <EditProfileModal />
         </Box>
         <Box sx={{ marginLeft: 30, marginTop: 2 }}>
           <Box sx={{ display: "flex" }}>

@@ -1,22 +1,14 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-
-/**
- * InfoEditコンポーネントのPropsの型定義
- */
-type InfoEditProps = {};
+import { useEditIntroduction } from "./useEditIntroduction";
 
 /**
  * 自己紹介文テキストフィールドコンポーネント
  */
-export const InfoEdit: React.FC<InfoEditProps> = ({}) => {
-  const [textValue, setTextValue] = React.useState("");
-  const handleTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.value.length <= 180) {
-      setTextValue(event.target.value);
-    }
-  };
+export const EditIntroduction: React.FC = ({}) => {
+  const { textValue, setTextValue, handleTextChange } = useEditIntroduction();
+
   return (
     <Box
       component="form"
