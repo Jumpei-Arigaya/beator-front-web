@@ -16,11 +16,9 @@ const VisuallyHiddenInput = styled("input")({
 });
 
 /**
- * UploadIconコンポーネントのProps型定義
+ * アイコン画像アップロードボタンコンポーネント
  */
-type UploadIconProps = {};
-
-export const UploadIcon: React.FC<UploadIconProps> = ({}) => {
+export const UploadIcon: React.FC = ({}) => {
   return (
     <Button
       component="label"
