@@ -6,7 +6,7 @@ import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 
 /**
- * プロフィール編集モーダルに表示する担当楽器選択コンポーネント
+ * 担当楽器選択ボックスに入る項目ボタン
  */
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
@@ -36,6 +36,9 @@ const MusicalInstrument = [
   { title: "パーカッション" },
 ];
 
+/**
+ *  ChoiceInstrumentコンポーネントのProps型定義
+ */
 type ChoiceInstrumentProps = {};
 
 export const ChoiceInstrument: React.FC<ChoiceInstrumentProps> = ({}) => {
@@ -58,9 +61,7 @@ export const ChoiceInstrument: React.FC<ChoiceInstrumentProps> = ({}) => {
         </li>
       )}
       style={{ width: 900 }}
-      renderInput={(params) => (
-        <TextField {...params} label="Checkboxes" placeholder="Favorites" />
-      )}
+      renderInput={(params) => <TextField {...params} label="担当楽器" />}
     />
   );
 };

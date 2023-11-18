@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import { AppBar } from "@mui/material";
 
 /**
- * プロフィールモダール時に表示するヘッダコンポーネント
+ * ProfileHeaderコンポーネントのPropsの型定義
  */
 export const ProfileHeader: React.FC = () => {
   return (

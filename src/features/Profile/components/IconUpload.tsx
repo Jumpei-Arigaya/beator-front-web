@@ -18,10 +18,7 @@ const VisuallyHiddenInput = styled("input")({
   width: 1,
 });
 
-type IconUploadProps = {
-  width?: number;
-  height?: number;
-};
+type IconUploadProps = {};
 
 export const IconUpload: React.FC<IconUploadProps> = ({}) => {
   return (

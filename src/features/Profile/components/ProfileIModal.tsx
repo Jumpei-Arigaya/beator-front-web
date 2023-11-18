@@ -16,6 +16,8 @@ import { ProfileHeader } from "./ProfileHeader";
 /**
  * プロフィールに表示するモーダルコンポーネント
  */
+type ProfileModalProps = {};
+
 const overlayStyle = {
   position: "fixed",
   top: 0,
@@ -38,7 +40,6 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-type ProfileModalProps = {};
 
 export const ProfileModal: React.FC<ProfileModalProps> = ({}) => {
   const [open, setOpen] = React.useState(false);
@@ -115,8 +116,8 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({}) => {
                   alignItems: "center",
                 }}
               >
-                <TextField label="UserID" style={{ width: "70%" }} />
-                <TextField label="Name" style={{ width: "70%" }} />
+                <TextField label="ユーザーID" style={{ width: "70%" }} />
+                <TextField label="名前" style={{ width: "70%" }} />
               </Box>
             </div>
 

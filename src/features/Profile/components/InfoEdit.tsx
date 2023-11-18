@@ -29,7 +29,7 @@ export const InfoEdit: React.FC<InfoEditProps> = ({}) => {
       <div>
         <TextField
           id="outlined-textarea"
-          label="Self introduction"
+          label="自己紹介"
           placeholder="Maximum of 180 characters"
           self-introduction
           multiline
