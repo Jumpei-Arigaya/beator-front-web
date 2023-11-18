@@ -7,11 +7,10 @@ export const useEditIntroduction = () => {
   const [textValue, setTextValue] = useState("");
 
   /**
-   * テキストフィールドの次第文字数をコントロールする
+   * テキストフィールドの最大文字数をコントロールする
    */
   const handleTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.value.length <= 180) {
-      setTextValue(event.target.value);
     }
   };
 
