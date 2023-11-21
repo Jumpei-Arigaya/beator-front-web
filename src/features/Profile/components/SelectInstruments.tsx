@@ -32,7 +32,7 @@ const MusicalInstrument = [
 ];
 
 /**
- *  店頭楽器選択ボックスのコンポーネント
+ *  担当楽器選択ボックスのコンポーネント
  */
 export const SelectInstruments: React.FC = ({}) => {
   return (

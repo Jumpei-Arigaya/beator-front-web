@@ -10,14 +10,9 @@ import { MusicalInstrument } from "./MusicalInstrument";
 import { EditProfileModal } from "./EditProfileModal";
 
 /**
- * UserProfileのコンポーネントのPropsの型定義
- */
-type UserProfileProps = {};
-
-/**
  * プロフィール画面を表示させるコンポーネント
  */
-export const UserProfile: React.FC<UserProfileProps> = ({}) => {
+export const UserProfile: React.FC = ({}) => {
   return (
     <main>
       <DashBoard>

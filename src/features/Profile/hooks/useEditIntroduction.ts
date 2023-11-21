@@ -12,7 +12,7 @@ export const useEditIntroduction = () => {
     if (event.target.value.length <= 180) {
       setTextValue(event.target.value);
     } else {
-      window.alert("自己紹介文は180文字以内で入力してください");
+      alert("自己紹介文は180文字以内で入力してください");
     }
   };
 

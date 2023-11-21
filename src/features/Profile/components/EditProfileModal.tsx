@@ -12,11 +12,7 @@ import { ProfileIcon } from "./ProfileIcon";
 import { SelectInstruments } from "./SelectInstruments";
 import { EditIntroduction } from "./EditIntroduction";
 import { EditProfileModalHeader } from "./EditProfileModalHeader";
-
-/**
- * プロフィールに表示するモーダルコンポーネント
- */
-type EditProfileModalProps = {};
+import { useClickModal } from "../hooks/useEditProfileModal";
 
 const overlayStyle = {
   position: "fixed",
@@ -42,14 +38,11 @@ const style = {
 };
 
 /**
- * EditProfileModalコンポーネントのPropsの型定義
+ * プロフィール編集モーダルを表示させるコンポーネント
  */
-export const EditProfileModal: React.FC<EditProfileModalProps> = ({}) => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
-  return (
+export const { open, handleOpen, handleClose } = useClickModal();
+export const EditProfileModal = () => (
+  <>
     <div>
       <Button
         onClick={handleOpen}
@@ -141,5 +134,5 @@ export const EditProfileModal: React.FC<EditProfileModalProps> = ({}) => {
         </Box>
       </Modal>
     </div>
-  );
-};
+  </>
+);

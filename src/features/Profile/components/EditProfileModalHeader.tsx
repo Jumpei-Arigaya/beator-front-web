@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import { AppBar } from "@mui/material";
 
 /**
- *プロフィール編集モーダルのヘッダ
+ * プロフィール編集モーダルのヘッダ
  */
 export const EditProfileModalHeader: React.FC = () => {
   return (
