@@ -1,9 +1,9 @@
 import { NextPage } from "next";
 
-import { UserProfilePage } from "@/features/Profile/components/UserProfilePage";
+import { UserProfile } from "@/features/Profile/components/UserProfile";
 
-const ProfilePage: NextPage = () => {
-  return <UserProfilePage />;
+const Profile: NextPage = () => {
+  return <UserProfile />;
 };
 
-export default ProfilePage;
+export default Profile;

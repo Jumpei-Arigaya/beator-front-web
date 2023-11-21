@@ -1,24 +1,22 @@
 import React from "react";
-
 import { DashBoard } from "@/components/layouts/DashBoard";
 import { ProfileIcon } from "@/features/Profile/components/ProfileIcon";
 import { Box, Typography } from "@mui/material";
-
 import { SocialConnection } from "@/features/Profile/components/SocialConnection";
 import { Horizon } from "./Horizon";
 import { Introduction } from "./Introduction";
-
 import { CreatedSongs } from "./CreatedSongs";
-
-import { TantouGakki } from "./TantouGakki";
+import { MusicalInstrument } from "./MusicalInstrument";
 
 /**
- * プロフィールに表示するプロフィール画面
+ * UserProfileのコンポーネントのPropsの型定義
  */
+type UserProfileProps = {};
 
-type UserProfilePageProps = {};
-
-export const UserProfilePage: React.FC<UserProfilePageProps> = ({}) => {
+/**
+ * プロフィール画面を表示させるコンポーネント
+ */
+export const UserProfile: React.FC<UserProfileProps> = ({}) => {
   return (
     <main>
       <DashBoard>
@@ -34,7 +32,7 @@ export const UserProfilePage: React.FC<UserProfilePageProps> = ({}) => {
           </Box>
           <Box sx={{ display: "flex" }}>
             <SocialConnection />
-            <TantouGakki />
+            <MusicalInstrument />
           </Box>
           <Horizon />
           <Introduction />
@@ -45,4 +43,4 @@ export const UserProfilePage: React.FC<UserProfilePageProps> = ({}) => {
   );
 };
 
-export default UserProfilePage;
+export default UserProfile;

@@ -1,17 +1,15 @@
 import { Typography } from "@mui/material";
-import Avatar from "@mui/material/Avatar";
 import { Horizon } from "./Horizon";
 import { PostCard } from "@/features/lookingForSounds/components/PostCard";
 
 /**
- * プロフィールに表示する投稿した楽曲一覧のコンポーネント
+ * CreatedSongsのコンポーネントのPropsの型定義
  */
+type CreatedSongsProps = {};
 
-type CreatedSongsProps = {
-  width?: number;
-  height?: number;
-};
-
+/**
+ * 投稿した楽曲一覧を表示させるコンポーネント
+ */
 export const CreatedSongs: React.FC<CreatedSongsProps> = ({}) => {
   return (
     <>
@@ -29,16 +27,10 @@ export const CreatedSongs: React.FC<CreatedSongsProps> = ({}) => {
       <div style={{ marginTop: "20px" }}>
         <PostCard
           play={false}
-          handleAudioControl={function (): void {
-            throw new Error("Function not implemented.");
-          }}
+          handleAudioControl={() => alert("クリック対象なし")}
           isHoverdPostCard={false}
-          handleMouseEnterPostCard={function (): void {
-            throw new Error("Function not implemented.");
-          }}
-          handleMouseLeavePostCard={function (): void {
-            throw new Error("Function not implemented.");
-          }}
+          handleMouseEnterPostCard={() => alert("ホバーされました")}
+          handleMouseLeavePostCard={() => alert("ホバーが解除されました")}
         />
       </div>
     </>
