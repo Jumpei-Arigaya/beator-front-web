@@ -2,6 +2,7 @@ import { Header } from "../elements/Header";
 import Box from "@mui/material/Box";
 import { SoundControlBar } from "@/features/audioPlayer/components/SoundControlBar";
 import { HEADER_HEIGHT } from "@/styles/layout";
+
 type LayoutProps = {
   children: React.ReactNode;
 };
