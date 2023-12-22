@@ -1,14 +1,9 @@
 import { Box, Typography } from "@mui/material";
 
 /**
- * SocialConnectionのコンポーネントのPropsの型定義
- */
-type SocialConnectionProps = {};
-
-/**
  * フォロワー数、フォロー数を表示させるコンポーネント
  */
-export const SocialConnection: React.FC<SocialConnectionProps> = ({}) => {
+export const SocialConnection: React.FC = () => {
   return (
     <Box
       sx={{
