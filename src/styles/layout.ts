@@ -1,4 +1,4 @@
 /**
- * ヘッダ分の上余白高さ定数
+ * ヘッダの高さ
  */
 export const HEADER_HEIGHT = "64px";
