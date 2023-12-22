@@ -6,7 +6,7 @@ import { useEditIntroduction } from "@/features/Profile/hooks/useEditIntroductio
 /**
  * 自己紹介文テキストフィールドコンポーネント
  */
-export const EditIntroduction: React.FC = ({}) => {
+export const EditIntroduction: React.FC = () => {
   const { textValue, handleTextChange } = useEditIntroduction();
 
   return (

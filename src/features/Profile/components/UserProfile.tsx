@@ -12,7 +12,7 @@ import { EditProfileModal } from "./EditProfileModal";
 /**
  * プロフィール画面を表示させるコンポーネント
  */
-export const UserProfile: React.FC = ({}) => {
+export const UserProfile: React.FC = () => {
   return (
     <main>
       <DashBoard>

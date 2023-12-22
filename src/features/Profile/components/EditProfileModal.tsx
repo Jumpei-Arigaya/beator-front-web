@@ -14,15 +14,6 @@ import { EditIntroduction } from "./EditIntroduction";
 import { EditProfileModalHeader } from "./EditProfileModalHeader";
 import { useClickModal } from "../hooks/useEditProfileModal";
 
-const overlayStyle = {
-  position: "fixed",
-  top: 0,
-  left: 0,
-  width: "100%",
-  height: "100%",
-  background: "rgba(0, 0, 0, 0.7)",
-  zIndex: 999,
-};
 const style = {
   position: "absolute",
   top: "50%",
@@ -40,99 +31,102 @@ const style = {
 /**
  * プロフィール編集モーダルを表示させるコンポーネント
  */
-export const { open, handleOpen, handleClose } = useClickModal();
-export const EditProfileModal = () => (
-  <>
-    <div>
-      <Button
-        onClick={handleOpen}
-        style={{
-          color: "inherit",
-          backgroundColor: "transparent",
-        }}
-      >
-        <SettingsRoundedIcon sx={{ fontSize: "35px" }} />
-      </Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <Box sx={{ display: "flex", marginTop: "-20px" }}>
-            <button
-              onClick={handleClose}
-              style={{ border: "none", background: "none" }}
-            >
-              <ClearIcon
-                sx={{ fontSize: "35px", marginRight: "10px", color: "white" }}
-              />
-            </button>
-            <div
-              style={{
-                position: "relative",
-                zIndex: -1,
-              }}
-            >
-              <Typography id="modal-modal-title" variant="h6" component="h2">
-                <EditProfileModalHeader />
-              </Typography>
-            </div>
-            <SaveAltIcon
-              sx={{ fontSize: "35px", marginLeft: "800px", color: "white" }}
-            />
-          </Box>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                marginTop: "50px",
-              }}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  gap: "5px",
-                  flexDirection: "column",
-                  alignItems: "center",
+export const EditProfileModal: React.FC = () => {
+  const { open, handleOpen, handleClose } = useClickModal();
+
+  return (
+    <>
+      <div>
+        <Button
+          onClick={handleOpen}
+          style={{
+            color: "inherit",
+            backgroundColor: "transparent",
+          }}
+        >
+          <SettingsRoundedIcon sx={{ fontSize: "35px" }} />
+        </Button>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Box sx={{ display: "flex", marginTop: "-20px" }}>
+              <button
+                onClick={handleClose}
+                style={{ border: "none", background: "none" }}
+              >
+                <ClearIcon
+                  sx={{ fontSize: "35px", marginRight: "10px", color: "white" }}
+                />
+              </button>
+              <div
+                style={{
+                  position: "relative",
+                  zIndex: -1,
                 }}
               >
-                <ProfileIcon width={90} height={90} />
-                <UploadIcon />
-              </Box>
+                <Typography id="modal-modal-title" variant="h6" component="h2">
+                  <EditProfileModalHeader />
+                </Typography>
+              </div>
+              <SaveAltIcon
+                sx={{ fontSize: "35px", marginLeft: "800px", color: "white" }}
+              />
+            </Box>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  marginTop: "50px",
+                }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: "5px",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                >
+                  <ProfileIcon width={90} height={90} />
+                  <UploadIcon />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "70%",
+                    gap: "10px",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <TextField label="ユーザーID" style={{ width: "70%" }} />
+                  <TextField label="名前" style={{ width: "70%" }} />
+                </Box>
+              </div>
+
               <Box
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  width: "70%",
-                  gap: "10px",
+                  gap: "50px",
                   justifyContent: "center",
                   alignItems: "center",
+                  marginTop: "50px",
                 }}
               >
-                <TextField label="ユーザーID" style={{ width: "70%" }} />
-                <TextField label="名前" style={{ width: "70%" }} />
+                <SelectInstruments />
+                <EditIntroduction />
               </Box>
-            </div>
-
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "50px",
-                justifyContent: "center",
-                alignItems: "center",
-                marginTop: "50px",
-              }}
-            >
-              <SelectInstruments />
-              <EditIntroduction />
-            </Box>
-          </Typography>
-        </Box>
-      </Modal>
-    </div>
-  </>
-);
+            </Typography>
+          </Box>
+        </Modal>
+      </div>
+    </>
+  );
+};
