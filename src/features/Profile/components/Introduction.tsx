@@ -1,14 +1,9 @@
 import { Typography } from "@mui/material";
 
 /**
- * IntroductionのコンポーネントのPropsの型定義
- */
-type IntroductionProps = {};
-
-/**
  * 自己紹介文を表示させるコンポーネント
  */
-export const Introduction: React.FC<IntroductionProps> = ({}) => {
+export const Introduction: React.FC = () => {
   return (
     <Typography
       fontSize="h6.fontSize"

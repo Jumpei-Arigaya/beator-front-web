@@ -1,14 +1,9 @@
 import { Typography, Stack, Chip } from "@mui/material";
 
 /**
- * MusicalInstrumentのコンポーネントのPropsの型定義
- */
-type MusicalInstrumentProps = {};
-
-/**
  * 担当楽器のチップを表示させるコンポーネント
  */
-export const MusicalInstrument: React.FC<MusicalInstrumentProps> = ({}) => {
+export const MusicalInstrument: React.FC = () => {
   return (
     <>
       <Typography

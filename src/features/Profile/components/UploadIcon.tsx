@@ -18,14 +18,14 @@ const VisuallyHiddenInput = styled("input")({
 /**
  * アイコン画像アップロードボタンコンポーネント
  */
-export const UploadIcon: React.FC = ({}) => {
+export const UploadIcon: React.FC = () => {
   return (
     <Button
       component="label"
       variant="contained"
       startIcon={<CloudUploadIcon />}
     >
-      Upload file
+      アップロード
       <VisuallyHiddenInput type="file" />
     </Button>
   );

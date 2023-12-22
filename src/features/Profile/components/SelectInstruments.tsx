@@ -34,7 +34,7 @@ const MusicalInstrument = [
 /**
  *  担当楽器選択ボックスのコンポーネント
  */
-export const SelectInstruments: React.FC = ({}) => {
+export const SelectInstruments: React.FC = () => {
   return (
     <Autocomplete
       multiple
