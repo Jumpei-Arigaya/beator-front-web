@@ -1,6 +1,7 @@
 import { useLookingForSounds } from "@/features/lookingForSounds/hooks/useLookingForSounds";
+import { useLookingForSoundsAPI } from "@/features/lookingForSounds/api/useGetLookingForSoundsAPI";
 import { PostCard } from "./PostCard";
-import { Grid, Typography, Button, Box, Paper } from "@mui/material";
+import { Grid, Typography, Paper } from "@mui/material";
 
 /**
  * サウンド募集中の楽曲一覧コンポーネント
@@ -13,6 +14,11 @@ export const LookingForSounds: React.FC = () => {
     handleMouseEnterPostCard,
     handleMouseLeavePostCard,
   } = useLookingForSounds();
+
+  const { sounds, isLoading, error } = useLookingForSoundsAPI();
+
+  if (isLoading) return <p>読み込み中</p>;
+  if (error) return <p>エラーが発生しました</p>;
 
   return (
     <Paper sx={{ margin: "20px" }}>
@@ -28,17 +34,25 @@ export const LookingForSounds: React.FC = () => {
           <Typography variant="subtitle1">もっと見る</Typography>
         </Grid>
         <Grid container item xs={12} sx={{ marginTop: "10px" }}>
-          {[...Array(4)].map((_, index) => (
-            <Grid item key={index}>
-              <PostCard
-                play={play}
-                handleAudioControl={handleAudioControl}
-                isHoverdPostCard={isHoverdPostCard}
-                handleMouseEnterPostCard={handleMouseEnterPostCard}
-                handleMouseLeavePostCard={handleMouseLeavePostCard}
-              />
-            </Grid>
-          ))}
+          {sounds?.map((sound, index) => {
+            // 一時的に4件まで表示
+            if (!sound || index > 3) {
+              return;
+            }
+
+            return (
+              <Grid item key={index}>
+                <PostCard
+                  play={play}
+                  handleAudioControl={handleAudioControl}
+                  isHoverdPostCard={isHoverdPostCard}
+                  handleMouseEnterPostCard={handleMouseEnterPostCard}
+                  handleMouseLeavePostCard={handleMouseLeavePostCard}
+                  sound={sound}
+                />
+              </Grid>
+            );
+          })}
         </Grid>
       </Grid>
     </Paper>
