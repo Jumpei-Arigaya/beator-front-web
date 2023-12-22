@@ -1,16 +1,20 @@
 import { Typography } from "@mui/material";
 import { Horizon } from "./Horizon";
 import { PostCard } from "@/features/lookingForSounds/components/PostCard";
-
-/**
- * CreatedSongsのコンポーネントのPropsの型定義
- */
-type CreatedSongsProps = {};
+import { Sound } from "@/features/lookingForSounds/api/useGetLookingForSoundsAPI";
 
 /**
  * 投稿した楽曲一覧を表示させるコンポーネント
  */
-export const CreatedSongs: React.FC<CreatedSongsProps> = ({}) => {
+export const CreatedSongs: React.FC = () => {
+  const sound: Sound = {
+    body: "tets",
+    email: "test",
+    id: "test",
+    name: "test",
+    postId: "test",
+  };
+
   return (
     <>
       <div
@@ -31,6 +35,7 @@ export const CreatedSongs: React.FC<CreatedSongsProps> = ({}) => {
           isHoverdPostCard={false}
           handleMouseEnterPostCard={() => alert("ホバーされました")}
           handleMouseLeavePostCard={() => alert("ホバーが解除されました")}
+          sound={sound}
         />
       </div>
     </>

@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import Chip from "@mui/material/Chip";
 import { Box } from "@mui/material";
 import { AudioControl } from "./AudioControl";
+import { Sound } from "@/features/lookingForSounds/api/useGetLookingForSoundsAPI";
 
 /**
  * PostCardコンポーネントのPropsの型定義
@@ -30,12 +31,17 @@ type PostCardProps = {
    * PostCardコンポーネントホバー解除時のイベント関数
    */
   handleMouseLeavePostCard: () => void;
+  /**
+   * 楽曲
+   */
+  sound: Sound;
 };
 
 /**
  * 楽曲情報投稿コンポーネント
  */
 export const PostCard: React.FC<PostCardProps> = (props) => {
+  const { sound } = props;
   return (
     <Card
       sx={{
@@ -54,10 +60,10 @@ export const PostCard: React.FC<PostCardProps> = (props) => {
     >
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          YOSHIKI
+          {sound.name}
         </Typography>
         <Typography variant="h5" component="div">
-          猫
+          {sound.id}
         </Typography>
         <Box sx={{ marginTop: 1 }}>
           <Typography variant="body2">募集パート</Typography>
