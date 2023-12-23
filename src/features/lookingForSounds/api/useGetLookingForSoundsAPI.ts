@@ -8,9 +8,9 @@ export type Sound = {
   postId: string;
 };
 
-export type getLookingForSoundsReturns = {
+export type GetLookingForSoundsReturns = {
   sounds?: Sound[];
-  error: any;
+  error: Error;
   isLoading: boolean;
 };
 
@@ -19,7 +19,7 @@ const getLookingForSounds = () =>
     res.json()
   );
 
-export const useLookingForSoundsAPI = (): getLookingForSoundsReturns => {
+export const useLookingForSoundsAPI = (): GetLookingForSoundsReturns => {
   const { data, error, isLoading } = useSWR(
     "/api/user/123",
     getLookingForSounds
